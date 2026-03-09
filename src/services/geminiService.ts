@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { AnalysisResult, QuestionnaireAnswers, UserInfo } from '../types';
 
 // Initialize the Gemini API client
-const genAI = new GoogleGenAI(import.meta.env.VITE_GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || "");
 
 export async function analyzeTongueImage(
   base64Image: string, 
