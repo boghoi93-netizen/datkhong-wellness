@@ -1,12 +1,14 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+async function getModel() {
+  const { GoogleGenerativeAI } = await import("@google/generative-ai");
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const genAI = new GoogleGenerativeAI(
+    import.meta.env.VITE_GEMINI_API_KEY || ""
+  );
 
-const genAI = new GoogleGenerativeAI(apiKey);
-
-const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash"
-});
+  return genAI.getGenerativeModel({
+    model: "gemini-1.5-flash",
+  });
+}
 
 export async function analyzeTongueImage(
   base64Image: string, 
