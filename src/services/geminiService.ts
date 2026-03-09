@@ -1,9 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { AnalysisResult, QuestionnaireAnswers, UserInfo } from '../types';
 
-// Initialize the Gemini API client
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+const genAI = new GoogleGenerativeAI(apiKey);
+
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash",
+  model: "gemini-1.5-flash"
 });
 
 export async function analyzeTongueImage(
