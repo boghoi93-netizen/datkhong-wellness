@@ -1,12 +1,13 @@
 async function getModel() {
-  const { GoogleGenerativeAI } = await import("@google/generative-ai");
+  const genai = await import("@google/generative-ai");
+  const GoogleGenerativeAI = genai.GoogleGenerativeAI;
 
   const genAI = new GoogleGenerativeAI(
     import.meta.env.VITE_GEMINI_API_KEY || ""
   );
 
   return genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-1.5-flash-latest"
   });
 }
 
