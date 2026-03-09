@@ -1,0 +1,5 @@
+{
+  "name": "Đạt Không Wellness",
+  "description": "Trợ lý sức khỏe Đông y AI - Phân tích thể trạng qua hình ảnh lưỡi và gợi ý chế độ ăn uống, bài tập.",
+  "requestFramePermissions": ["camera"]
+}
