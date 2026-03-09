@@ -1,4 +1,4 @@
-import { GoogleGenAI, Type } from '@google/genai';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { AnalysisResult, QuestionnaireAnswers, UserInfo } from '../types';
 
 // Initialize the Gemini API client
